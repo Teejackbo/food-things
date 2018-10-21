@@ -1,4 +1,4 @@
-# food-thing
+# food-things
 
 ## Description
 

@@ -1,9 +1,9 @@
 {
-  "name": "food-thing",
+  "name": "food-things",
   "version": "0.0.1",
   "description": "A food thing.",
   "scripts": {
-    "back": "cd food-thing-backend && npm run start:dev"
+    "back": "cd food-things-backend && npm run start:dev"
   },
   "author": "Jack Coldrick",
   "license": "ISC",

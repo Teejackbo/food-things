@@ -1,7 +1,7 @@
 {
-  "name": "food-thing",
+  "name": "food-things",
   "version": "1.0.0",
-  "description": "a-food-thing.",
+  "description": "a-food-things.",
   "author": "jack-coldrick",
   "license": "MIT",
   "scripts": {
