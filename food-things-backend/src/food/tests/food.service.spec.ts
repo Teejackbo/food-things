@@ -46,7 +46,7 @@ describe('FoodService', () => {
 
   describe('create', () => {
     it('Should return the food data that was stored.', async () => {
-      const result = await foodService.create(user, food);
+      const result = await foodService.create(user as any, food);
       expect(result).toBe(food);
     });
   });

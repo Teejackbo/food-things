@@ -23,9 +23,8 @@ export class HttpStrategy extends PassportStrategy(Strategy) {
    * @async
    * @throws Throws an UnauthorizedException if the user is not able to be authenticated.
    * @param token The token to authenticate.
-   * @param done Function called when the user is authenticated. Handled by Nest.
    */
-  async validate(token: string, done: Function) {
+  async validate(token: string, done: Function): Promise<void> {
     const user = await this._authService.validateUser(token);
     if (!user) {
       return done(new UnauthorizedException(), false);
