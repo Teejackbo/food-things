@@ -13,6 +13,7 @@ export class HttpStrategy extends PassportStrategy(Strategy) {
    * Constructor for the HttpStrategy.
    * @constructor
    * @param _authService Instance of AuthService. Injected by Nest.
+   * @param done Function called when the user is authenticated. Handled by Nest.
    */
   constructor(private readonly _authService: AuthService) {
     super();
