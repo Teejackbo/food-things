@@ -62,6 +62,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import isEmpty from 'lodash/isEmpty'
 import { REGISTER_USER_ACTION } from '@/store/modules/user/types'
 
 export default {
@@ -92,9 +93,7 @@ export default {
       await this.register(this.registrationInfo)
       this.submitting = false
 
-      if (this.user) {
-        this.$router.push({ name: 'home' })
-      }
+      if (!isEmpty(this.user)) this.$router.push({ name: 'home' })
     },
   },
 }

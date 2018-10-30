@@ -32,6 +32,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import isEmpty from 'lodash/isEmpty'
 import { LOGIN_ACTION } from '@/store/modules/user/types'
 
 export default {
@@ -64,7 +65,7 @@ export default {
       })
       this.submitting = false
 
-      if (this.user) this.$router.push({ name: 'home' })
+      if (!isEmpty(this.user)) this.$router.push({ name: 'home' })
     },
   },
 }
