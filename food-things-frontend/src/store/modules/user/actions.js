@@ -1,12 +1,12 @@
 import store from 'store'
 import TYPES from './types'
 import { ADD_ALERT_ACTION } from '../alerts/types'
-import userRequests from '@/api/users'
+import UserService from '@/services/UserService'
 
 export default {
   async [TYPES.LOGIN_ACTION]({ commit, dispatch }, data) {
     const { loginInfo, alert, remember } = data
-    const response = await userRequests.login(loginInfo)
+    const response = await UserService.login(loginInfo)
 
     if (response) {
       const user = response.data
@@ -35,7 +35,7 @@ export default {
   },
 
   async [TYPES.LOGOUT_ACTION]({ commit, dispatch }) {
-    const response = await userRequests.logout()
+    const response = await UserService.logout()
     if (response) {
       store.remove('user')
       dispatch(ADD_ALERT_ACTION, {
@@ -48,7 +48,7 @@ export default {
   },
 
   async [TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, registrationInfo) {
-    const response = await userRequests.register(registrationInfo)
+    const response = await UserService.register(registrationInfo)
 
     if (response) {
       const user = response.data
