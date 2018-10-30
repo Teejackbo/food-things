@@ -8,6 +8,7 @@
         type="text"
         placeholder="joe_bloggs"
         label="Username"
+        name="username"
         icon="user"
       />
 
@@ -16,6 +17,7 @@
         type="password"
         placeholder="•••••••••"
         label="Password"
+        name="password"
         icon="key"
       />
 
@@ -25,7 +27,7 @@
         label="Remember Me"
       />
 
-      <PrimaryButton type="success">Login</PrimaryButton>
+      <PrimaryButton type="success" data-cy-login-btn>Login</PrimaryButton>
     </form>
   </div>
 </template>
