@@ -1,8 +1,0 @@
-{
-  "hooks": {
-    "pre-commit":
-      "pretty-quick --staged && npm run --silent lint && npm run --silent test && npm run --silent test:e2e",
-    "pre-push":
-      "pretty-quick --staged && npm run --silent lint && npm run --silent test && npm run --silent test:e2e"
-  }
-}
