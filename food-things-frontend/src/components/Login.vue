@@ -34,6 +34,7 @@
 import { mapActions, mapState } from 'vuex'
 import isEmpty from 'lodash/isEmpty'
 import { LOGIN_ACTION } from '@/store/modules/user/types'
+import isEmpty from 'lodash/isEmpty'
 
 export default {
   name: 'Login',
