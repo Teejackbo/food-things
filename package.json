@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "A food thing.",
   "scripts": {
-    "back": "cd food-things-backend && npm run start:dev"
+    "back": "cd food-things-backend && npm run start:dev",
+    "front": "cd food-things-frontend && npm run serve",
+    "dev": "concurrently --kill-others \"npm run front\" \"npm run back\""
   },
   "author": "Jack Coldrick",
   "license": "ISC",
