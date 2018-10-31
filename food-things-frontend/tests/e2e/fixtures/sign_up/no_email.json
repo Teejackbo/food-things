@@ -1,0 +1,21 @@
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": [
+    {
+      "target": {
+        "first_name": "qweqwe",
+        "last_name": "asdasd",
+        "email": "",
+        "username": "new_username",
+        "password": "123456"
+      },
+      "value": "",
+      "property": "email",
+      "children": [],
+      "constraints": {
+        "isNotEmpty": "Please enter an email address."
+      }
+    }
+  ]
+}

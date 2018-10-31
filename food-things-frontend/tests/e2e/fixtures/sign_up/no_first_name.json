@@ -1,0 +1,21 @@
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": [
+    {
+      "target": {
+        "first_name": "",
+        "last_name": "asdasd",
+        "email": "oiasdhoiasd@asdqwe.asdasd",
+        "username": "new_username",
+        "password": "123456"
+      },
+      "value": "",
+      "property": "first_name",
+      "children": [],
+      "constraints": {
+        "isNotEmpty": "Please enter a first name."
+      }
+    }
+  ]
+}

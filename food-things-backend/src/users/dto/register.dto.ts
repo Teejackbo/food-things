@@ -1,4 +1,4 @@
-import { IsEmail, IsAlpha, IsNotEmpty, Length } from 'class-validator';
+import { IsEmail, IsNotEmpty, Length } from 'class-validator';
 
 /**
  * The DTO for registering a user.
@@ -14,7 +14,6 @@ export class RegisterUserDTO {
    * @readonly
    * @public
    */
-  @IsAlpha({ message: 'First name must only contain letters.' })
   @IsNotEmpty({ message: 'Please enter a first name.' })
   readonly first_name: string;
 
@@ -23,7 +22,6 @@ export class RegisterUserDTO {
    * @readonly
    * @public
    */
-  @IsAlpha({ message: 'Last Name must only contain letters.' })
   @IsNotEmpty({ message: 'Please enter a last name.' })
   readonly last_name: string;
 

@@ -28,7 +28,7 @@
           v-model="registrationInfo.email"
           display="inline-block"
           inputWidth="218px"
-          type="email"
+          type="text"
           placeholder="joebloggs@example.com"
           label="Email Address"
           name="email"
