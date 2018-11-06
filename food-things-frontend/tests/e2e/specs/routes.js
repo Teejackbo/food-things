@@ -10,4 +10,8 @@ describe('Routes', () => {
   it('/sign-up', () => {
     cy.visit('/sign-up')
   })
+
+  it('/food/create', () => {
+    cy.visit('/food/create')
+  })
 })

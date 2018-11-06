@@ -1,0 +1,23 @@
+{
+  "name": "Carrots",
+  "description": "carrots are carrots",
+  "calories": 50,
+  "carbs": 25,
+  "protein": 12,
+  "fat": 6,
+  "user": {
+    "id": 1,
+    "first_name": "Jack",
+    "last_name": "Coldrick",
+    "email": "jcldrk@gmail.com",
+    "username": "jack",
+    "token": "718692da1b18b0836a11",
+    "permissions": 1,
+    "createdAt": "2018-07-17T11:56:34.360Z",
+    "updatedAt": "2018-11-06T20:32:38.000Z"
+  },
+  "slug": "carrots",
+  "id": 1,
+  "createdAt": "2018-11-06T21:08:11.280Z",
+  "updatedAt": "2018-11-06T21:08:11.280Z"
+}
