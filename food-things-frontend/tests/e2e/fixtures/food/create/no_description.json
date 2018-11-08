@@ -1,0 +1,22 @@
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": [
+    {
+      "target": {
+        "name": "carrots",
+        "description": null,
+        "calories": 50,
+        "carbs": 20,
+        "protein": 10,
+        "fat": 5
+      },
+      "value": null,
+      "property": "description",
+      "children": [],
+      "constraints": {
+        "isNotEmpty": "Please enter a description of the food."
+      }
+    }
+  ]
+}

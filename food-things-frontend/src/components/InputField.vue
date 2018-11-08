@@ -32,7 +32,7 @@ export default {
 
   props: {
     value: {
-      type: [String, Boolean],
+      type: [String, Boolean, Number],
       required: false,
     },
     label: {

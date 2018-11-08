@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Logout from '@/views/Logout.vue'
 import SignUp from '@/views/SignUp.vue'
+import CreateFood from '@/views/Food/CreateFood.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,14 @@ const router = new Router({
       component: SignUp,
       meta: {
         title: 'Sign Up - Food Things',
+      },
+    },
+    {
+      path: '/food/create',
+      name: 'create-food',
+      component: CreateFood,
+      meta: {
+        title: 'Create Food - Food Things',
       },
     },
   ],

@@ -4,6 +4,7 @@
       <router-link :to="{ name: 'home' }">Feed</router-link>
     </section>
     <section class="nav-right">
+      <router-link :to="{ name: 'create-food' }">Create Food</router-link>
       <router-link v-if="user.id" :to="{ name: 'logout' }">Logout</router-link>
       <router-link v-else :to="{ name: 'login' }">Login</router-link>
       <router-link v-if="!user.id" :to="{ name: 'sign-up' }">Sign Up</router-link>

@@ -1,0 +1,23 @@
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": [
+    {
+      "target": {
+        "name": "carrots",
+        "description": "carrots are carrots",
+        "calories": 50,
+        "carbs": "",
+        "protein": 10,
+        "fat": 1
+      },
+      "value": "",
+      "property": "calories",
+      "children": [],
+      "constraints": {
+        "min": "Carbs must be above 0.",
+        "isNumber": "The amount of carbs must be a number."
+      }
+    }
+  ]
+}

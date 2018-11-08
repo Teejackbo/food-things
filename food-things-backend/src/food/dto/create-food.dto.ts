@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsNumber, Min } from 'class-validator';
+import { IsNotEmpty, IsNumber, Min } from 'class-validator';
 
 /**
  * The data-transfer object for creating a new food.
@@ -16,7 +16,6 @@ export class CreateFoodDTO {
    * @readonly
    */
   @IsNotEmpty({ message: 'Please enter the name of the food.' })
-  @IsString()
   readonly name: string;
 
   /**
@@ -25,7 +24,6 @@ export class CreateFoodDTO {
    * @readonly
    */
   @IsNotEmpty({ message: 'Please enter a description of the food.' })
-  @IsString()
   readonly description: string;
 
   /**
