@@ -1,5 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "cd food-things-frontend && npm run --silent lint && npm run --silent test && cd ../food-things-backend && npm run --silent lint && npm run --silent test && npm run --silent test:e2e"
-  }
-}
