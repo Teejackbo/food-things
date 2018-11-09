@@ -8,7 +8,6 @@ describe('Logout', () => {
 
   it('Should log you out.', () => {
     cy.login()
-    cy.visit('/')
     cy.contains('Logout').click()
     cy.contains('Login')
     cy.contains('Sign Up')
