@@ -29,4 +29,14 @@ describe('Login', () => {
     cy.contains('Logout')
     cy.contains('Successfully logged in.').should('have.class', 'success')
   })
+
+  it('Should still be logged in after refreshing if you choose to be remembered.', () => {
+    cy.stubLogin()
+    cy.get('[name="username"]').type('jack')
+    cy.get('[name="password"]').type('jack')
+    cy.get('.checkbox').click()
+    cy.get('[data-cy-login-btn]').click()
+    cy.reload()
+    cy.contains('Logout')
+  })
 })
