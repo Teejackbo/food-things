@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import SignUp from '@/components/SignUp'
-import registerGlobals from './global/'
+import SignUp from '@/views/SignUp'
+import registerGlobals from '../components/global/'
 
 registerGlobals()
 
