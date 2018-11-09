@@ -115,8 +115,4 @@ input {
   left: 5px;
   width: 20px;
 }
-
-.heroicon-ui {
-  fill: $red;
-}
 </style>
