@@ -48,9 +48,9 @@ export class FoodController {
   }
 
   /**
-   * A controller method to handle a PUT request to /food/:slug.
+   * A controller method to handle a PUT request to /food/:id.
    * @async
-   * @param slug The food item to update.
+   * @param food The food item to update.
    * @param foodData The data to update the food item with.
    * @returns The updated food item.
    */
@@ -66,7 +66,7 @@ export class FoodController {
   }
 
   /**
-   * A controller method to handle a GET request to /food/:slug.
+   * A controller method to handle a GET request to /food/:id.
    * @async
    * @param food The food item to retrieve.
    * @returns The requested food item.
@@ -80,7 +80,7 @@ export class FoodController {
   }
 
   /**
-   * A controller method to handle a DELETE request to /food/:slug.
+   * A controller method to handle a DELETE request to /food/:id.
    * @async
    * @param food The food item to delete.
    */
