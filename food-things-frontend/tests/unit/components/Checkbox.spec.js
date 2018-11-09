@@ -27,6 +27,18 @@ describe('Checkbox', () => {
     expect(wrapper.contains('div.checkbox.checked')).toBe(false)
   })
 
+  it('Should render a tick if it is checked, or nothing if not.', () => {
+    const wrapper = shallowMount(Checkbox, {
+      propsData: {
+        value: true,
+      },
+    })
+
+    expect(wrapper.text()).toBe('✓')
+    wrapper.setData({ checked: false })
+    expect(wrapper.text()).toBe('')
+  })
+
   it('Should emit an event if it is clicked or space is used to toggle it.', () => {
     const wrapper = shallowMount(Checkbox)
 
