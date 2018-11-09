@@ -21,11 +21,11 @@
         icon="key"
       />
 
-      <InputField
-        v-model="remember"
-        type="checkbox"
-        label="Remember Me"
-      />
+      
+      <label>
+        Remember Me?
+        <Checkbox v-model="remember" />
+      </label>
 
       <PrimaryButton type="success" data-cy-login-btn>Login</PrimaryButton>
     </form>

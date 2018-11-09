@@ -12,12 +12,12 @@ describe('Login', () => {
     expect(wrapper.is('div')).toBe(true)
   })
 
-  it('Should render three inputs of correct types.', () => {
+  it('Should render two inputs and a checkbox.', () => {
     const wrapper = shallowMount(Login, { mocks: { $store } })
 
     expect(wrapper.find('[type="text"]').exists()).toBe(true)
     expect(wrapper.find('[type="password"]').exists()).toBe(true)
-    expect(wrapper.find('[type="checkbox"]').exists()).toBe(true)
+    expect(wrapper.find('label vuecomponent-stub').exists()).toBe(true)
   })
 
   it('Should render a button with the type of success.', () => {
