@@ -50,7 +50,7 @@ export default {
   font-size: 21px;
   height: 28px;
   justify-content: center;
-  margin: 0.6em 0;
+  margin-bottom: 1em;
   padding: 0.05em;
   transition: background 0.15s;
   user-select: none;
