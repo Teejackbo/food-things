@@ -13,6 +13,6 @@ Cypress.Commands.add('stubLogin', () => {
 Cypress.Commands.add('login', () => {
   cy.stubLogin()
   cy.visit('/login')
-  cy.get('[type="checkbox"]').click()
+  cy.get('.checkbox').click()
   cy.get('[data-cy-login-btn]').click()
 })

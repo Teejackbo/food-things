@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
+    "test:v": "vue-cli-service test:unit --verbose",
     "test:watch": "vue-cli-service test:unit --watch",
+    "test:watch:v": "vue-cli-service test:unit --watch --verbose",
     "test:e2e": "vue-cli-service test:e2e --headless",
     "test:e2e:open": "vue-cli-service test:e2e"
   },
