@@ -40,7 +40,7 @@ describe('User Actions', () => {
     data = { loginInfo: user, alert: false, remember: false }
   })
 
-  describe('TYPES.LOGIN_ACTION', () => {
+  describe('LOGIN_ACTION', () => {
     it('Should call the UserService.', async () => {
       await actions[TYPES.LOGIN_ACTION]({ commit, dispatch }, data)
 
@@ -91,7 +91,7 @@ describe('User Actions', () => {
     })
   })
 
-  describe('TYPES.STORE_USER_ACTION', () => {
+  describe('STORE_USER_ACTION', () => {
     it('Should commit the correct mutation.', () => {
       actions[TYPES.STORE_USER_ACTION]({ commit }, user)
 
@@ -99,7 +99,7 @@ describe('User Actions', () => {
     })
   })
 
-  describe('TYPES.FETCH_FROM_STORAGE_ACTION', () => {
+  describe('FETCH_FROM_STORAGE_ACTION', () => {
     it('Should fetch the user from localStorage.', () => {
       actions[TYPES.FETCH_FROM_STORAGE_ACTION]({ commit })
 
@@ -121,7 +121,7 @@ describe('User Actions', () => {
     })
   })
 
-  describe('TYPES.LOGOUT_ACTION', () => {
+  describe('LOGOUT_ACTION', () => {
     it('Should call the UserService and remove the user from localStorage.', async () => {
       await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
 
@@ -151,7 +151,7 @@ describe('User Actions', () => {
     })
   })
 
-  describe('TYPES.REGISTER_USER_ACTION', () => {
+  describe('REGISTER_USER_ACTION', () => {
     it('Should call the UserService.', async () => {
       await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
 

@@ -17,14 +17,14 @@ describe('User Mutations', () => {
     }
   })
 
-  describe('User Stored', () => {
+  describe('STORE_USER_MUTATION', () => {
     it('Should set the user in state.', () => {
       mutations[TYPES.STORE_USER_MUTATION](state, user)
       expect(state.user).toBe(user)
     })
   })
 
-  describe('User Deleted', () => {
+  describe('DELETE_USER_MUTATION', () => {
     it('Should remove the user from state.', () => {
       state.user = user
       mutations[TYPES.DELETE_USER_MUTATION](state)

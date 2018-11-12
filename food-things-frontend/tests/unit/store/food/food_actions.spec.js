@@ -16,7 +16,7 @@ const food = {
 }
 
 describe('Food Actions', () => {
-  describe(TYPES.CREATE_FOOD_ACTION, () => {
+  describe('CREATE_FOOD_ACTION', () => {
     FoodService.create = jest
       .fn()
       .mockImplementation(async () => ({ data: food }))

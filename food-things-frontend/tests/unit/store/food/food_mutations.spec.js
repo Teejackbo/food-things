@@ -16,7 +16,7 @@ describe('Food Mutations', () => {
     carbs: 60,
   }
 
-  describe('Create Food', () => {
+  describe('CREATE_FOOD_MUTATION', () => {
     it('Should store the food in state.', () => {
       mutations[TYPES.CREATE_FOOD_MUTATION](state, food)
       expect(state.selectedFood).toBe(food)
