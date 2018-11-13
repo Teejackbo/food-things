@@ -43,8 +43,9 @@ export default {
         message: 'Successfully signed out.',
         timeout: 3000,
       })
+
+      commit(TYPES.DELETE_USER_MUTATION)
     }
-    commit(TYPES.DELETE_USER_MUTATION)
   },
 
   async [TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, registrationInfo) {

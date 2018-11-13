@@ -18,6 +18,7 @@ describe('Alert Mutations', () => {
     it('Should push the new alert to state.', () => {
       const alert = generateAlert()
       mutations[TYPES.ADD_ALERT_MUTATION](state, alert)
+
       expect(state.alerts).toHaveLength(2)
       expect(state.alerts[1]).toBe(alert)
       expect(state.alerts[0]).toBe(initialAlert)
@@ -28,6 +29,7 @@ describe('Alert Mutations', () => {
     it('Should add the new alerts to state.', () => {
       const alerts = [generateAlert(), generateAlert()]
       mutations[TYPES.ADD_MULTIPLE_ALERTS_MUTATION](state, alerts)
+
       expect(state.alerts).toHaveLength(3)
       expect(state.alerts[0]).toBe(initialAlert)
       expect(state.alerts[1]).toBe(alerts[0])
@@ -38,6 +40,7 @@ describe('Alert Mutations', () => {
   describe('REMOVE_ALERT_MUTATION', () => {
     it('Should remove the alert from state.', () => {
       mutations[TYPES.REMOVE_ALERT_MUTATION](state, initialAlert)
+
       expect(state.alerts).toHaveLength(0)
     })
 
@@ -45,6 +48,7 @@ describe('Alert Mutations', () => {
       const alerts = [generateAlert(), generateAlert()]
       state.alerts = [...state.alerts, ...alerts]
       mutations[TYPES.REMOVE_ALERT_MUTATION](state, alerts[0])
+
       expect(state.alerts).toHaveLength(2)
       expect(state.alerts[0]).toBe(initialAlert)
       expect(state.alerts[1]).toBe(alerts[1])

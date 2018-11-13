@@ -122,14 +122,19 @@ describe('User Actions', () => {
   })
 
   describe('LOGOUT_ACTION', () => {
-    it('Should call the UserService and remove the user from localStorage.', async () => {
+    it('Should call the UserService.', async () => {
       await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
 
       expect(UserService.logout).toHaveBeenCalled()
-      expect(store.remove).toHaveBeenCalled()
     })
 
-    it('Should dispatch an alert and commit the correct mutation.', async () => {
+    it('Should remove the user from localStorage.', async () => {
+      await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
+
+      expect(store.remove).toHaveBeenCalledWith('user')
+    })
+
+    it('Should dispatch an alert.', async () => {
       await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
 
       expect(dispatch).toHaveBeenCalledWith(ADD_ALERT_ACTION, {
@@ -137,17 +142,33 @@ describe('User Actions', () => {
         message: 'Successfully signed out.',
         timeout: 3000,
       })
+    })
+
+    it('Should commit the correct mutation.', async () => {
+      await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
 
       expect(commit).toHaveBeenCalledWith(TYPES.DELETE_USER_MUTATION)
     })
 
-    it('Should not proceed past the request if there is no response.', async () => {
+    it('Should not remove the user from localStorage if there is no response.', async () => {
       UserService.logout = jest.fn().mockImplementation(async () => null)
       await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
 
       expect(store.remove).not.toHaveBeenCalled()
+    })
+
+    it('Should not dispatch an alert if there is no response.', async () => {
+      UserService.logout = jest.fn().mockImplementation(async () => null)
+      await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
+
       expect(dispatch).not.toHaveBeenCalled()
-      expect(commit).toHaveBeenCalled()
+    })
+
+    it('Should not commit a mutation if there is no response.', async () => {
+      UserService.logout = jest.fn().mockImplementation(async () => null)
+      await actions[TYPES.LOGOUT_ACTION]({ commit, dispatch })
+
+      expect(commit).not.toHaveBeenCalled()
     })
   })
 
@@ -158,15 +179,7 @@ describe('User Actions', () => {
       expect(UserService.register).toHaveBeenCalledWith(user)
     })
 
-    it('Should not proceed past the request if there is no response.', async () => {
-      UserService.register = jest.fn().mockImplementation(() => null)
-      await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
-
-      expect(dispatch).not.toHaveBeenCalled()
-      expect(commit).not.toHaveBeenCalled()
-    })
-
-    it('Should dispatch an alert and commit the correct mutation.', async () => {
+    it('Should dispatch an alert.', async () => {
       await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
 
       expect(dispatch).toHaveBeenCalledWith(ADD_ALERT_ACTION, {
@@ -174,8 +187,26 @@ describe('User Actions', () => {
         type: 'success',
         timeout: 3000,
       })
+    })
+
+    it('Should commit the correct mutation.', async () => {
+      await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
 
       expect(commit).toHaveBeenCalledWith(TYPES.STORE_USER_MUTATION, user)
+    })
+
+    it('Should not dispatch an alert if there is no response.', async () => {
+      UserService.register = jest.fn().mockImplementation(() => null)
+      await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
+
+      expect(dispatch).not.toHaveBeenCalled()
+    })
+
+    it('Should not commit a mutation if there is no response.', async () => {
+      UserService.register = jest.fn().mockImplementation(() => null)
+      await actions[TYPES.REGISTER_USER_ACTION]({ commit, dispatch }, user)
+
+      expect(commit).not.toHaveBeenCalled()
     })
   })
 })
