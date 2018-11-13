@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Renders a nav element. 1`] = `
+<nav>
+  <section
+    class="nav-left"
+  >
+    <vuecomponent-stub
+      to="[object Object]"
+    />
+  </section>
+   
+  <section
+    class="nav-right"
+  >
+    <vuecomponent-stub
+      to="[object Object]"
+    />
+     
+    <vuecomponent-stub
+      to="[object Object]"
+    />
+     
+    <vuecomponent-stub
+      to="[object Object]"
+    />
+  </section>
+</nav>
+`;
