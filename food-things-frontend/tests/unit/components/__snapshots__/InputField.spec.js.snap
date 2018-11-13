@@ -1,45 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputField /> Should apply attributes to the input element. 1`] = `
-<div
-  class="form-field"
->
-  <!---->
-   
-  <div
-    class="input-wrapper"
-  >
-    <input
-      placeholder="placeholder"
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`<InputField /> Should apply the correct class if display prop is inline-block. 1`] = `
+exports[`<InputField /> Should apply props correctly. 1`] = `
 <div
   class="form-field inline-block"
->
-  <label>
-    Label
-  </label>
-   
-  <div
-    class="input-wrapper"
-  >
-    <input
-      placeholder="placeholder"
-      style="width: 5em;"
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`<InputField /> Should apply the inputWidth prop to the input. 1`] = `
-<div
-  class="form-field"
 >
   <label>
     Label
@@ -62,25 +25,6 @@ exports[`<InputField /> Should match snapshot. 1`] = `
   class="form-field"
 >
   <!---->
-   
-  <div
-    class="input-wrapper"
-  >
-    <input
-      placeholder="placeholder"
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`<InputField /> Should render a label with the label prop as text. 1`] = `
-<div
-  class="form-field"
->
-  <label>
-    Test Label
-  </label>
    
   <div
     class="input-wrapper"
