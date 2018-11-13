@@ -2,8 +2,25 @@ import { shallowMount } from '@vue/test-utils'
 import Checkbox from '@/components/Checkbox.vue'
 
 describe('Checkbox', () => {
+  it('Should match snapshot.', () => {
+    const wrapper = shallowMount(Checkbox)
+
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
+  it('Should match snapshot when value is true.', () => {
+    const wrapper = shallowMount(Checkbox, {
+      propsData: {
+        value: true,
+      },
+    })
+
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
   it('Should render a div with the class of checkbox.', () => {
     const wrapper = shallowMount(Checkbox)
+
     expect(wrapper.contains('div.checkbox')).toBe(true)
   })
 
