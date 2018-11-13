@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp Should match snapshot. 1`] = `
+<div>
+  <h1>
+    Sign Up
+  </h1>
+   
+  <form>
+    <div>
+      <vuecomponent-stub
+        display="inline-block"
+        inputwidth="80px"
+        label="First Name"
+        name="first_name"
+        placeholder="Joseph"
+        type="text"
+      />
+       
+      <vuecomponent-stub
+        display="inline-block"
+        inputwidth="100px"
+        label="Last Name"
+        name="last_name"
+        placeholder="Bloggs"
+        type="text"
+      />
+       
+      <vuecomponent-stub
+        display="inline-block"
+        inputwidth="218px"
+        label="Email Address"
+        name="email"
+        placeholder="joebloggs@example.com"
+        type="text"
+      />
+    </div>
+     
+    <div>
+      <vuecomponent-stub
+        display="inline-block"
+        label="Username"
+        name="username"
+        placeholder="joe_bloggs"
+        type="text"
+      />
+       
+      <vuecomponent-stub
+        display="inline-block"
+        inputwidth="240px"
+        label="Password"
+        name="password"
+        placeholder="Must have at least 5 characters."
+        type="password"
+      />
+    </div>
+     
+    <vuecomponent-stub
+      type="success"
+    />
+  </form>
+</div>
+`;
+
+exports[`SignUp Should render a fullscreen spinner if the component is submitting. 1`] = `
+<vuecomponent-stub
+  fullscreen="true"
+/>
+`;
