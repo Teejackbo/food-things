@@ -24,7 +24,6 @@ describe('<Login />', () => {
       },
     })
 
-    expect(wrapper.attributes()).toEqual({ fullscreen: 'true' })
     expect(wrapper.element).toMatchSnapshot()
   })
 })

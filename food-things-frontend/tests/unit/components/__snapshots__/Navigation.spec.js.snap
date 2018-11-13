@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Navigation /> Renders a nav element. 1`] = `
+exports[`<Navigation /> Should match snapshot. 1`] = `
 <nav>
   <section
     class="nav-left"

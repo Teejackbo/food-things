@@ -2,10 +2,9 @@ import { shallowMount } from '@vue/test-utils'
 import SecondaryButton from '@/components/SecondaryButton.vue'
 
 describe('<SecondaryButton />', () => {
-  it('Should render a button element.', () => {
+  it('Should match snapshot.', () => {
     const wrapper = shallowMount(SecondaryButton)
 
-    expect(wrapper.contains('button')).toBe(true)
     expect(wrapper.element).toMatchSnapshot()
   })
 
@@ -16,7 +15,6 @@ describe('<SecondaryButton />', () => {
       },
     })
 
-    expect(wrapper.classes()).toContain('error')
     expect(wrapper.element).toMatchSnapshot()
   })
 })

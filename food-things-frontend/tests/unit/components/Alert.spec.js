@@ -65,19 +65,4 @@ describe('<Alert />', () => {
 
     expect(wrapper.element).toMatchSnapshot()
   })
-
-  it('Renders a div.', () => {
-    const wrapper = getWrapper()
-    expect(wrapper.contains('div')).toBe(true)
-  })
-
-  it('Displays the alert message.', () => {
-    const wrapper = getWrapper()
-    expect(wrapper.text()).toBe('This is an alert.')
-  })
-
-  it('Applies the correct class.', () => {
-    const wrapper = getWrapper()
-    expect(wrapper.classes()).toContain('success')
-  })
 })

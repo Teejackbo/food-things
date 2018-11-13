@@ -2,10 +2,9 @@ import { shallowMount } from '@vue/test-utils'
 import PrimaryButton from '@/components/PrimaryButton.vue'
 
 describe('<PrimaryButton />', () => {
-  it('Should render a button element.', () => {
+  it('Should match snapshot.', () => {
     const wrapper = shallowMount(PrimaryButton)
 
-    expect(wrapper.contains('button')).toBe(true)
     expect(wrapper.element).toMatchSnapshot()
   })
 
@@ -16,7 +15,6 @@ describe('<PrimaryButton />', () => {
       },
     })
 
-    expect(wrapper.classes()).toContain('error')
     expect(wrapper.element).toMatchSnapshot()
   })
 })

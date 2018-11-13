@@ -15,16 +15,9 @@ function getWrapper() {
 }
 
 describe('<Navigation />', () => {
-  it('Renders a nav element.', () => {
+  it('Should match snapshot.', () => {
     const wrapper = getWrapper()
 
-    expect(wrapper.contains('nav')).toBe(true)
     expect(wrapper.element).toMatchSnapshot()
-  })
-
-  it('Should contain two sections.', () => {
-    const wrapper = getWrapper()
-
-    expect(wrapper.findAll('section')).toHaveLength(2)
   })
 })
