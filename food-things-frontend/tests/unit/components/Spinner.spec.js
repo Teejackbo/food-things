@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Spinner from '@/components/Spinner.vue'
 
-describe('Spinner', () => {
+describe('<Spinner />', () => {
   it('Should render a div with a class of spinner.', () => {
     const wrapper = shallowMount(Spinner)
 

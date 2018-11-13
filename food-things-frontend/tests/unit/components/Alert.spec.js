@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import Alert from '@/components/Alert.vue'
 import $store from '@/store'
 
-describe('Alert', () => {
+describe('<Alert />', () => {
   function getWrapper() {
     return shallowMount(Alert, {
       propsData: {

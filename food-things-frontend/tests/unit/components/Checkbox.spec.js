@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Checkbox from '@/components/Checkbox.vue'
 
-describe('Checkbox', () => {
+describe('<Checkbox />', () => {
   it('Should match snapshot.', () => {
     const wrapper = shallowMount(Checkbox)
 

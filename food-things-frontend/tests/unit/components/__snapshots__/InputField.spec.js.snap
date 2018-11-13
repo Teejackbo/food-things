@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField Should apply attributes to the input element. 1`] = `
+exports[`<InputField /> Should apply attributes to the input element. 1`] = `
 <div
   class="form-field"
 >
@@ -17,7 +17,7 @@ exports[`InputField Should apply attributes to the input element. 1`] = `
 </div>
 `;
 
-exports[`InputField Should apply the correct class if display prop is inline-block. 1`] = `
+exports[`<InputField /> Should apply the correct class if display prop is inline-block. 1`] = `
 <div
   class="form-field inline-block"
 >
@@ -37,7 +37,7 @@ exports[`InputField Should apply the correct class if display prop is inline-blo
 </div>
 `;
 
-exports[`InputField Should apply the inputWidth prop to the input. 1`] = `
+exports[`<InputField /> Should apply the inputWidth prop to the input. 1`] = `
 <div
   class="form-field"
 >
@@ -57,7 +57,7 @@ exports[`InputField Should apply the inputWidth prop to the input. 1`] = `
 </div>
 `;
 
-exports[`InputField Should match snapshot. 1`] = `
+exports[`<InputField /> Should match snapshot. 1`] = `
 <div
   class="form-field"
 >
@@ -74,7 +74,7 @@ exports[`InputField Should match snapshot. 1`] = `
 </div>
 `;
 
-exports[`InputField Should render a label with the label prop as text. 1`] = `
+exports[`<InputField /> Should render a label with the label prop as text. 1`] = `
 <div
   class="form-field"
 >

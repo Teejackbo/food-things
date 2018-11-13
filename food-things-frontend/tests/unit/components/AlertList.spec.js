@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import AlertList from '@/components/AlertList.vue'
 
-describe('AlertList', () => {
+describe('<AlertList />', () => {
   const alerts = [
     {
       message: 'Alert 1.',

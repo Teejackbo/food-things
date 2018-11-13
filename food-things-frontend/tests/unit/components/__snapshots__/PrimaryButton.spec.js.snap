@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PrimaryButton Should render a button element with the class of the type prop. 1`] = `
+exports[`<PrimaryButton /> Should render a button element with the class of the type prop. 1`] = `
 <button
   class="error"
 />
 `;
 
-exports[`PrimaryButton Should render a button element. 1`] = `<button />`;
+exports[`<PrimaryButton /> Should render a button element. 1`] = `<button />`;

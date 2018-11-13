@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alert Should match snapshot with a type of error. 1`] = `
+exports[`<Alert /> Should match snapshot with a type of error. 1`] = `
 <div
   class="alert error"
 >
@@ -10,7 +10,7 @@ exports[`Alert Should match snapshot with a type of error. 1`] = `
 </div>
 `;
 
-exports[`Alert Should match snapshot with a type of success. 1`] = `
+exports[`<Alert /> Should match snapshot with a type of success. 1`] = `
 <div
   class="alert success"
 >
@@ -20,7 +20,7 @@ exports[`Alert Should match snapshot with a type of success. 1`] = `
 </div>
 `;
 
-exports[`Alert Should match snapshot with a type of warning. 1`] = `
+exports[`<Alert /> Should match snapshot with a type of warning. 1`] = `
 <div
   class="alert warning"
 >
@@ -30,7 +30,7 @@ exports[`Alert Should match snapshot with a type of warning. 1`] = `
 </div>
 `;
 
-exports[`Alert Should match snapshot with no class. 1`] = `
+exports[`<Alert /> Should match snapshot with no class. 1`] = `
 <div
   class="alert"
 >

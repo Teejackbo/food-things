@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import SecondaryButton from '@/components/SecondaryButton.vue'
 
-describe('SecondaryButton', () => {
+describe('<SecondaryButton />', () => {
   it('Should render a button element.', () => {
     const wrapper = shallowMount(SecondaryButton)
 

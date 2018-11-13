@@ -15,7 +15,7 @@ function getWrapper(label, inputWidth, display) {
   })
 }
 
-describe('InputField', () => {
+describe('<InputField />', () => {
   it('Should match snapshot.', () => {
     const wrapper = getWrapper()
 

@@ -14,7 +14,7 @@ function getWrapper() {
   })
 }
 
-describe('Navigation', () => {
+describe('<Navigation />', () => {
   it('Renders a nav element.', () => {
     const wrapper = getWrapper()
 
