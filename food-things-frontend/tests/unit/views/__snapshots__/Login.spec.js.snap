@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> Should display a fullscreen spinner if it is submitting. 1`] = `
+<vuecomponent-stub
+  fullscreen="true"
+/>
+`;
+
+exports[`<Login /> Should match snapshot. 1`] = `
+<div>
+  <h1>
+    Login
+  </h1>
+   
+  <form>
+    <vuecomponent-stub
+      icon="user"
+      label="Username"
+      name="username"
+      placeholder="joe_bloggs"
+      type="text"
+    />
+     
+    <vuecomponent-stub
+      icon="key"
+      label="Password"
+      name="password"
+      placeholder="•••••••••"
+      type="password"
+    />
+     
+    <label>
+      
+      Remember Me?
+      
+      <vuecomponent-stub />
+    </label>
+     
+    <vuecomponent-stub
+      data-cy-login-btn=""
+      type="success"
+    />
+  </form>
+</div>
+`;

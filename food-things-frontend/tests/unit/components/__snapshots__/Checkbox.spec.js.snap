@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> Should match snapshot when value is false. 1`] = `
+<div
+  class="checkbox"
+  tabindex="0"
+>
+  
+  
+
+</div>
+`;
+
+exports[`<Checkbox /> Should match snapshot when value is true. 1`] = `
+<div
+  class="checkbox checked"
+  tabindex="0"
+>
+  
+  ✓
+
+</div>
+`;

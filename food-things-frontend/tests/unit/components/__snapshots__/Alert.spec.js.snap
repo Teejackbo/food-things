@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> Should match snapshot with a type of error. 1`] = `
+<div
+  class="alert error"
+>
+  
+  This is an alert
+
+</div>
+`;
+
+exports[`<Alert /> Should match snapshot with a type of success. 1`] = `
+<div
+  class="alert success"
+>
+  
+  This is an alert.
+
+</div>
+`;
+
+exports[`<Alert /> Should match snapshot with a type of warning. 1`] = `
+<div
+  class="alert warning"
+>
+  
+  This is an alert
+
+</div>
+`;
+
+exports[`<Alert /> Should match snapshot with no class. 1`] = `
+<div
+  class="alert"
+>
+  
+  This is an alert
+
+</div>
+`;

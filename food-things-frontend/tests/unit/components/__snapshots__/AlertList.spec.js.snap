@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertList /> Should match snapshot. 1`] = `
+<span
+  name="slide-fade"
+  tag="section"
+>
+  <div
+    class="alert success"
+  >
+    
+  Alert 1.
+
+  </div>
+  <div
+    class="alert warning"
+  >
+    
+  Alert 2.
+
+  </div>
+</span>
+`;
