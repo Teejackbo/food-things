@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner Should render a div with a class of spinner inside the wrapper. 1`] = `
+<div
+  class="wrapper"
+>
+  <div
+    class="spinner"
+    name="fade"
+  />
+</div>
+`;
+
+exports[`Spinner Should render a div with a class of spinner. 1`] = `
+<div
+  class="spinner"
+  name="fade"
+/>
+`;
+
+exports[`Spinner Should render a div with a class of wrapper if passed :fullScreen="true". 1`] = `
+<div
+  class="wrapper"
+>
+  <div
+    class="spinner"
+    name="fade"
+  />
+</div>
+`;
