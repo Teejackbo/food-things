@@ -10,9 +10,10 @@
           inputWidth="80px"
           type="text"
           placeholder="Joseph"
-          label="First Name"
           name="first_name"
-        />
+        >
+          <label for="first_name">First Name</label>
+        </InputField>
 
         <InputField
           v-model="registrationInfo.last_name"
@@ -20,9 +21,10 @@
           inputWidth="100px"
           type="text"
           placeholder="Bloggs"
-          label="Last Name"
           name="last_name"
-        />
+        >
+          <label for="last_name">Last Name</label>
+        </InputField>
 
         <InputField
           v-model="registrationInfo.email"
@@ -30,9 +32,10 @@
           inputWidth="218px"
           type="text"
           placeholder="joebloggs@example.com"
-          label="Email Address"
           name="email"
-        />
+        >
+          <label for="email">Email Address</label>
+        </InputField>
       </div>
 
       <div>
@@ -41,9 +44,10 @@
           display="inline-block"
           type="text"
           placeholder="joe_bloggs"
-          label="Username"
           name="username"
-        />
+        >
+          <label for="username">Username</label>
+        </InputField>
 
         <InputField
           v-model="registrationInfo.password"
@@ -51,9 +55,10 @@
           inputWidth="240px"
           type="password"
           placeholder="Must have at least 5 characters."
-          label="Password"
           name="password"
-        />
+        >
+          <label for="password">Password</label>
+        </InputField>
       </div>
       <PrimaryButton type="success">Sign Up</PrimaryButton>
     </form>

@@ -7,49 +7,55 @@
         v-model.trim="food.name"
         type="text"
         placeholder="Bread"
-        label="Name"
         name="name"
-      />
+      >
+        <label for="name">Name</label>
+      </InputField>
 
       <InputField
         v-model.trim="food.description"
         type="text"
         placeholder="Bread is a staple food prepared from a dough of flour and water, usually by baking."
-        label="Description"
         name="description"
-      />
+      >
+        <label for="description">Description</label>
+      </InputField>
 
       <InputField
         v-model.number="food.calories"
         type="text"
         placeholder="120"
-        label="Calories per 100g"
         name="calories"
-      />
+      >
+        <label for="calories">Calories per 100g</label>
+      </InputField>
 
       <InputField
         v-model.number="food.carbs"
         type="text"
         placeholder="45"
-        label="Carbs per 100g"
         name="carbs"
-      />
+      >
+        <label for="carbs">Carbs per 100g</label>
+      </InputField>
 
       <InputField
         v-model.number="food.protein"
         type="text"
         placeholder="14"
-        label="Protein per 100g"
         name="protein"
-      />
+      >
+        <label for="protein">Protein per 100g</label>
+      </InputField>
 
       <InputField
         v-model.number="food.fat"
         type="text"
         placeholder="20"
-        label="Fat per 100g"
         name="fat"
-      />
+      >
+        <label for="fat">Fat per 100g</label>
+      </InputField>
 
       <PrimaryButton type="success">Create</PrimaryButton>
     </form>
