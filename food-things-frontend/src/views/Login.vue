@@ -5,23 +5,30 @@
     <form @submit.prevent="handleSubmit">
       <InputField
         v-model="userData.username"
+        :valid="!$v.userData.username.$invalid"
+        :error="$v.userData.username.$error"
         type="text"
         placeholder="joe_bloggs"
-        label="Username"
         name="username"
-        icon="user"
-      />
+        @blur="$v.userData.username.$touch()"
+      >
+        <label for="username">Username</label>
+      </InputField>
+      <ValidationMessage v-show="$v.userData.username.$error">Please enter a username.</ValidationMessage>
 
       <InputField
         v-model="userData.password"
+        :valid="!$v.userData.password.$invalid"
+        :error="$v.userData.password.$error"
         type="password"
         placeholder="•••••••••"
-        label="Password"
         name="password"
-        icon="key"
-      />
+        @blur="$v.userData.password.$touch()"
+      >
+        <label for="password">Password</label>
+      </InputField>
+      <ValidationMessage v-show="$v.userData.password.$error">Please enter a password.</ValidationMessage>
 
-      
       <label>
         Remember Me?
         <Checkbox v-model="remember" />
@@ -34,11 +41,17 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import { required } from 'vuelidate/lib/validators'
 import { ADD_ALERT_ACTION } from '@/store/modules/alerts/types'
 import { LOGIN_ACTION } from '@/store/modules/user/types'
+import ValidationMessage from '@/components/ValidationMessage.vue'
 
 export default {
   name: 'LoginView',
+
+  components: {
+    ValidationMessage,
+  },
 
   data: () => ({
     userData: {
@@ -48,6 +61,17 @@ export default {
     submitting: false,
     remember: false,
   }),
+
+  validations: {
+    userData: {
+      username: {
+        required,
+      },
+      password: {
+        required,
+      },
+    },
+  },
 
   computed: mapState({
     id: state => state.user.user.id,
@@ -71,6 +95,9 @@ export default {
     }),
 
     async handleSubmit() {
+      this.$v.userData.$touch()
+      if (this.$v.userData.$error) return
+
       this.submitting = true
       await this.login({
         loginInfo: this.userData,

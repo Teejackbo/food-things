@@ -1,26 +1,14 @@
 <template>
   <div :class="{'inline-block': display }" class="form-field">
-    <label v-if="label" :for="attributes.name">{{ label }}</label>
-    <div v-if="icon" class="input-wrapper">
-      <img :src="require(`../assets/icons/icon-${icon}.svg`)" class="icon">
-      <input
-        :value="value"
-        :style="`width: ${inputWidth};`"
-        v-bind="attributes"
-        class="offset"
-        @input="input"
-        v-on="listeners"
-      >
-    </div>
-    <div v-else class="input-wrapper">
-      <input
-        :value="value"
-        :style="`width: ${inputWidth};`"
-        v-bind="attributes"
-        @input="input"
-        v-on="listeners"
-      >
-    </div>
+    <slot />
+    <input
+      :value="value"
+      :style="`width: ${inputWidth};`"
+      v-bind="attributes"
+      :class="{ error, valid }"
+      @input="input"
+      v-on="listeners"
+    >
   </div>
 </template>
 
@@ -35,10 +23,6 @@ export default {
       type: [String, Boolean, Number],
       required: false,
     },
-    label: {
-      type: String,
-      required: false,
-    },
     inputWidth: {
       type: String,
       required: false,
@@ -47,8 +31,12 @@ export default {
       type: String,
       required: false,
     },
-    icon: {
-      type: String,
+    error: {
+      type: Boolean,
+      required: false,
+    },
+    valid: {
+      type: Boolean,
       required: false,
     },
   },
@@ -76,13 +64,37 @@ export default {
 <style lang="scss" scoped>
 @import '../style/variables';
 
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 .form-field {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 input {
   background: $grey-light;
-  border: 0;
+  border: 1px solid $grey;
+  border-radius: 5px;
   box-shadow: 0px 1px 2px $shadow-lighter;
   color: $grey-darkest;
   display: block;
@@ -94,25 +106,18 @@ input {
     padding-left: 2em;
   }
 
-  &[type='checkbox'] {
-    background: $grey-light;
+  &.valid {
+    border: 1px solid $primary;
   }
-}
 
-.input-wrapper {
-  position: relative;
+  &.error {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    border: 1px solid $red;
+  }
 }
 
 .inline-block {
   display: inline-block;
   margin-right: 1em;
-}
-
-.icon {
-  height: 20px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 20px;
 }
 </style>
