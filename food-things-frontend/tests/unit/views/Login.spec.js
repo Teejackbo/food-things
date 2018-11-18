@@ -1,7 +1,11 @@
+import Vue from 'vue'
+import Vuelidate from 'vuelidate'
 import { shallowMount } from '@vue/test-utils'
 import Login from '@/views/Login'
 import registerGlobals from '../components/global'
 import $store from '@/store'
+
+Vue.use(Vuelidate)
 
 registerGlobals()
 

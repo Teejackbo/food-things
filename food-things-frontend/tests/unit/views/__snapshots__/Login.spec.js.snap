@@ -14,19 +14,22 @@ exports[`<Login /> Should match snapshot. 1`] = `
    
   <form>
     <vuecomponent-stub
-      icon="user"
-      label="Username"
       name="username"
       placeholder="joe_bloggs"
-      type="text"
+    />
+     
+    <validationmessage-stub
+      style="display: none;"
     />
      
     <vuecomponent-stub
-      icon="key"
-      label="Password"
       name="password"
       placeholder="•••••••••"
       type="password"
+    />
+     
+    <validationmessage-stub
+      style="display: none;"
     />
      
     <label>

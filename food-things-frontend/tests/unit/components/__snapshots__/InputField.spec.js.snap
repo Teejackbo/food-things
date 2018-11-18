@@ -4,19 +4,13 @@ exports[`<InputField /> Should apply props correctly. 1`] = `
 <div
   class="form-field inline-block"
 >
-  <label>
-    Label
-  </label>
    
-  <div
-    class="input-wrapper"
-  >
-    <input
-      placeholder="placeholder"
-      style="width: 5em;"
-      type="text"
-    />
-  </div>
+  <input
+    class=""
+    placeholder="placeholder"
+    style="width: 5em;"
+    type="text"
+  />
 </div>
 `;
 
@@ -24,15 +18,11 @@ exports[`<InputField /> Should match snapshot. 1`] = `
 <div
   class="form-field"
 >
-  <!---->
    
-  <div
-    class="input-wrapper"
-  >
-    <input
-      placeholder="placeholder"
-      type="text"
-    />
-  </div>
+  <input
+    class=""
+    placeholder="placeholder"
+    type="text"
+  />
 </div>
 `;
