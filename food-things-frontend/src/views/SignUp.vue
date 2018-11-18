@@ -8,7 +8,6 @@
           v-model="registrationInfo.first_name"
           display="inline-block"
           inputWidth="80px"
-          type="text"
           placeholder="Joseph"
           name="first_name"
         >
@@ -19,7 +18,6 @@
           v-model="registrationInfo.last_name"
           display="inline-block"
           inputWidth="100px"
-          type="text"
           placeholder="Bloggs"
           name="last_name"
         >
@@ -30,7 +28,6 @@
           v-model="registrationInfo.email"
           display="inline-block"
           inputWidth="218px"
-          type="text"
           placeholder="joebloggs@example.com"
           name="email"
         >
@@ -42,7 +39,6 @@
         <InputField
           v-model="registrationInfo.username"
           display="inline-block"
-          type="text"
           placeholder="joe_bloggs"
           name="username"
         >

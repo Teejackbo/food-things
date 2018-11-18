@@ -5,7 +5,6 @@
     <form @submit.prevent="handleSubmit">
       <InputField
         v-model.trim="food.name"
-        type="text"
         placeholder="Bread"
         name="name"
       >
@@ -14,7 +13,6 @@
 
       <InputField
         v-model.trim="food.description"
-        type="text"
         placeholder="Bread is a staple food prepared from a dough of flour and water, usually by baking."
         name="description"
       >
@@ -23,7 +21,6 @@
 
       <InputField
         v-model.number="food.calories"
-        type="text"
         placeholder="120"
         name="calories"
       >
@@ -32,7 +29,6 @@
 
       <InputField
         v-model.number="food.carbs"
-        type="text"
         placeholder="45"
         name="carbs"
       >
@@ -41,7 +37,6 @@
 
       <InputField
         v-model.number="food.protein"
-        type="text"
         placeholder="14"
         name="protein"
       >
@@ -50,7 +45,6 @@
 
       <InputField
         v-model.number="food.fat"
-        type="text"
         placeholder="20"
         name="fat"
       >

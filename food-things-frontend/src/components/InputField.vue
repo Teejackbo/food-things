@@ -6,6 +6,7 @@
       :style="`width: ${inputWidth};`"
       v-bind="attributes"
       :class="{ error, valid }"
+      :type="type || 'text'"
       @input="input"
       v-on="listeners"
     >
@@ -37,6 +38,10 @@ export default {
     },
     valid: {
       type: Boolean,
+      required: false,
+    },
+    type: {
+      type: String,
       required: false,
     },
   },

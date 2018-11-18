@@ -7,7 +7,6 @@
         v-model="userData.username"
         :valid="!$v.userData.username.$invalid"
         :error="$v.userData.username.$error"
-        type="text"
         placeholder="joe_bloggs"
         name="username"
         @blur="$v.userData.username.$touch()"
