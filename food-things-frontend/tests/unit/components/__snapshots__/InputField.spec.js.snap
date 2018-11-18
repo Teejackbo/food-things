@@ -1,14 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputField /> Should apply props correctly. 1`] = `
+exports[`<InputField /> Should apply error class correctly. 1`] = `
 <div
-  class="form-field inline-block"
+  class="form-field"
 >
    
   <input
-    class=""
+    class="error"
     placeholder="placeholder"
-    style="width: 5em;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`<InputField /> Should apply valid class correctly. 1`] = `
+<div
+  class="form-field"
+>
+   
+  <input
+    class="valid"
+    placeholder="placeholder"
     type="text"
   />
 </div>

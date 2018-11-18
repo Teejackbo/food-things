@@ -1,12 +1,11 @@
 import { shallowMount } from '@vue/test-utils'
 import InputField from '@/components/InputField.vue'
 
-function getWrapper(label, inputWidth, display) {
+function getWrapper(error, valid) {
   return shallowMount(InputField, {
     propsData: {
-      label,
-      inputWidth,
-      display,
+      error,
+      valid,
     },
     attrs: {
       placeholder: 'placeholder',
@@ -22,8 +21,14 @@ describe('<InputField />', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-  it('Should apply props correctly.', () => {
-    const wrapper = getWrapper('Label', '5em', 'inline-block')
+  it('Should apply error class correctly.', () => {
+    const wrapper = getWrapper(true, false)
+
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
+  it('Should apply valid class correctly.', () => {
+    const wrapper = getWrapper(false, true)
 
     expect(wrapper.element).toMatchSnapshot()
   })
