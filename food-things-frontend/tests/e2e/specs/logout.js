@@ -7,6 +7,14 @@ describe('Logout', () => {
   })
 
   it('Should log you out.', () => {
+    cy.server()
+    cy.route({
+      method: 'GET',
+      url: '**/logout',
+      status: 200,
+      response: '',
+    }).as('logout')
+
     cy.login()
     cy.contains('Logout').click()
     cy.contains('Login')

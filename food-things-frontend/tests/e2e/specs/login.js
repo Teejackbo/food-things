@@ -3,22 +3,40 @@ describe('Login', () => {
     cy.visit('/login')
   })
 
-  it('Displays an error without a username.', () => {
+  it('Displays an error without a username on submit.', () => {
     cy.get('[name="password"]').type('password')
     cy.get('[data-cy-login-btn]').click()
-    cy.contains('Please enter a username.').should('have.class', 'error')
+    cy.contains('Please enter a username.')
+    cy.get('[name="username"]').should('have.class', 'error')
   })
 
-  it('Displays an error without a password.', () => {
+  it('Displays an error without a username on blur.', () => {
+    cy.get('[name="username"]').click()
+    cy.get('[name="password"]').click()
+    cy.contains('Please enter a username.')
+    cy.get('[name="username"]').should('have.class', 'error')
+  })
+
+  it('Displays an error without a password on submit.', () => {
     cy.get('[name="username"]').type('username')
     cy.get('[data-cy-login-btn]').click()
-    cy.contains('Please enter a password.').should('have.class', 'error')
+    cy.contains('Please enter a password.')
+    cy.get('[name="password"]').should('have.class', 'error')
   })
 
-  it('Displays both errors when neither field is filled out.', () => {
+  it('Displays an error without a password on blur.', () => {
+    cy.get('[name="password"]').click()
+    cy.get('[name="username"]').click()
+    cy.contains('Please enter a password.')
+    cy.get('[name="password"]').should('have.class', 'error')
+  })
+
+  it('Displays both errors when neither field is filled out on submit.', () => {
     cy.get('[data-cy-login-btn]').click()
-    cy.contains('Please enter a username.').should('have.class', 'error')
-    cy.contains('Please enter a password.').should('have.class', 'error')
+    cy.contains('Please enter a username.')
+    cy.contains('Please enter a password.')
+    cy.get('[name="username"]').should('have.class', 'error')
+    cy.get('[name="password"]').should('have.class', 'error')
   })
 
   it('Signs you in and redirects to the home page.', () => {
