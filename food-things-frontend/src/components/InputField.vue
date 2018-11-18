@@ -1,9 +1,8 @@
 <template>
-  <div :class="{'inline-block': display }" class="form-field">
+  <div class="form-field">
     <slot />
     <input
       :value="value"
-      :style="`width: ${inputWidth};`"
       v-bind="attributes"
       :class="{ error, valid }"
       :type="type || 'text'"
@@ -22,14 +21,6 @@ export default {
   props: {
     value: {
       type: [String, Boolean, Number],
-      required: false,
-    },
-    inputWidth: {
-      type: String,
-      required: false,
-    },
-    display: {
-      type: String,
       required: false,
     },
     error: {
@@ -119,10 +110,5 @@ input {
     animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     border: 1px solid $red;
   }
-}
-
-.inline-block {
-  display: inline-block;
-  margin-right: 1em;
 }
 </style>
