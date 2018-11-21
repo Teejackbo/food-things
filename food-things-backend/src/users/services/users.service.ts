@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserEntity } from '../entities/user.entity';
+import { UserQueryableFields } from 'users/user-queryable-fields';
 
 /**
  * A service to handle Users. Responsible for managing tokens and user data.
@@ -34,13 +35,18 @@ export class UsersService {
     token: string,
     options?: { stripPassword: boolean },
   ): Promise<UserEntity> {
-    if (options.stripPassword) {
-      const user = await this._userRepository.findOne({ where: { token } });
-      if (user) {
-        delete user.password;
-      }
-      return user;
+    const user = await this._userRepository.findOne({ where: { token } });
+    if (options.stripPassword && user) delete user.password;
+    return user;
+  }
+
+  async find(where: UserQueryableFields): Promise<UserEntity> {
+    const user = await this._userRepository.findOne({ where });
+    if (user) {
+      delete user.password;
+      delete user.token;
     }
-    return this._userRepository.findOne({ where: { token } });
+
+    return user;
   }
 }

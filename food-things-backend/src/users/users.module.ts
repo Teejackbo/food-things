@@ -8,6 +8,7 @@ import { UserDoesntExistPipe } from './pipes/user-doesnt-exist.pipe';
 import { UserAuthenticationService } from './services/user-authentication.service';
 import { UserRegistrationService } from './services/user-registration.service';
 import { UsersService } from './services/users.service';
+import { UserFinderController } from './controllers/user-finder.controller';
 
 /**
  * The UsersModule. Handles everything to do with users.
@@ -21,6 +22,10 @@ import { UsersService } from './services/users.service';
     UserDoesntExistPipe,
   ],
   exports: [UsersService],
-  controllers: [UserAuthenticationController, UserRegistrationController],
+  controllers: [
+    UserAuthenticationController,
+    UserRegistrationController,
+    UserFinderController,
+  ],
 })
 export class UsersModule {}

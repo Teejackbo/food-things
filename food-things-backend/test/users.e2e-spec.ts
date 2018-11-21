@@ -8,6 +8,7 @@ import { MockUserEntity } from '../src/users/tests/user.mock';
 import { UserRegistrationService } from '../src/users/services/user-registration.service';
 import { UserDoesntExistPipe } from '../src/users/pipes/user-doesnt-exist.pipe';
 import { UserAuthenticationService } from '../src/users/services/user-authentication.service';
+import { UsersService } from '../src/users/services/users.service';
 
 describe('Users', () => {
   let app: INestApplication;
@@ -27,6 +28,16 @@ describe('Users', () => {
     logout() {},
   };
 
+  const usersService = {
+    find({ where }) {
+      for (let field in where) {
+        if (user[field] !== where[field]) return null;
+      }
+
+      return user;
+    },
+  };
+
   beforeAll(async () => {
     const moduleFixture = await Test.createTestingModule({
       imports: [UsersModule],
@@ -39,6 +50,8 @@ describe('Users', () => {
       .useValue({ transform: data => data })
       .overrideProvider(UserAuthenticationService)
       .useValue(userAuthService)
+      .overrideProvider(UsersService)
+      .useValue(usersService)
       .compile();
 
     app = moduleFixture.createNestApplication();
@@ -76,6 +89,17 @@ describe('Users', () => {
         .send({ username: user.username, password: user.password })
         .expect(200)
         .expect(userAuthService.login(user));
+    });
+  });
+
+  describe('UserFinder', () => {
+    beforeEach(() => {});
+
+    it('/GET /users/find?id=1', () => {
+      return request(app.getHttpServer())
+        .get('/users/find?id=1')
+        .expect(200)
+        .expect(user);
     });
   });
 });
